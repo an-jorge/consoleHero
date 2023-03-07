@@ -11,29 +11,65 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+# What is Console Hero?
+<p> Console hero is your friend and will help you and your script be more beautifull. </p>
+<p> Do you want to make your scripts more professional? console hero is easy to use. You will love use it come and check it </p>
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+<p> Some common features of an ANSI colors library include: </p>
+
+* **Color text**
+
+* **Bold**
+
+* **Italic**
+
+* **Underline**
+
+* **Background**
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
 
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+<p> TODO: List prerequisites </p>
+<p> To change text color, [0] means text color and [1] the background </p>
 
 ```dart
-const like = 'sample';
+import 
+{$foreground$.blue[0]} Hello World {foreground.endLine()}
+```
+<p> After style code you should use method endLine to clear all style </p>
+## Usage
+
+<!--- 
+<p> TODO: Include short and useful examples for package users. Add longer examples </p>
+!--->
+
+```dart
+    // Change text color
+void main() {
+    // Blue text 
+  print('${foreground.blue[0]} Hello World ${foreground.endLine()} ');
+
+      // Yellow text 
+  print('${foreground.yellow[0]} Hello World ${foreground.endLine()} ');
+}
+
+    // Change backgrond color
+void main() {
+
+  // Blue Background
+    print('${foreground.blue[1]} Cool background ${foreground.endLine()}');
+
+      // Blue Background
+    print('${foreground.yellow[1]} Cool background ${foreground.endLine()}');
+
+    print(
+      '${foreground.yellow[1]} ${foreground.magenta[0]} Cool text and background ${foreground.endLine()}');
+}
 ```
 
-## Additional information
+![demo](assets/demo.PNG)
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+## Additional information
