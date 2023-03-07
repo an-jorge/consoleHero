@@ -1,5 +1,5 @@
 name: consolehero
-description: A starting point for Dart libraries or applications.
+description: Console Hero is an open-source ANSI colors library for developers to add color and formatting to their console applications.
 version: 1.0.0
 repository: https://github.com/an-jorge/consoleHero
 License: MIT License
@@ -7,8 +7,9 @@ License: MIT License
 environment:
   sdk: '>=2.19.0 <3.0.0'
 
-# dependencies:
-#   path: ^1.8.0
+dependencies:
+  path: ^1.8.0
+  args: ^2.3.0
 
 dev_dependencies:
   lints: ^2.0.0
