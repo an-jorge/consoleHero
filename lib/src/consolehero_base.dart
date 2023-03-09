@@ -29,7 +29,7 @@ class Colours {
 //    Text Styles ANSI
 
   // Reset all colors or style
-  String endLine() => '\x1b[0m';
+  String end() => '\x1b[0m';
   // Bold
   String bold() => '\x1b[1m';
   // Italic
@@ -39,23 +39,26 @@ class Colours {
   // Strikerthrough
   String strikerthrough() => '\x1b[9m';
 
-  // Components Alerts
-  String error(String text) =>
-      '${foreground.red[1]} $text ${foreground.endLine()}';
-  String warning(String text) =>
-      '${foreground.yellow[1]} $text ${foreground.endLine()}';
-  String info(String text) =>
-      '${foreground.blue[1]} $text ${foreground.endLine()}';
-  String success(String text) =>
-      '${foreground.green[1]} $text ${foreground.endLine()}';
+  // New components
+  String success(String text) => '\x1b[37;44m $text ${focus.end()}';
+  String error(String text) => '\x1b[37;41m $text ${focus.end()}';
+  String warning(String text) => '\x1b[30;43m $text ${focus.end()}';
+  String information(String text) => '\x1b[30;46m $text ${focus.end()}';
+
+  // Components without background
+  String okSU(String text) => '\x1B[32m $text ${focus.end()}';
+  String err(String text) => '\x1B[31m $text ${focus.end()}';
+  String warn(String text) => '\x1B[33m $text ${focus.end()}';
+  String info(String text) => '\x1B[36m $text ${focus.end()}';
 }
 
-final foreground = Colours(
+final focus = Colours(
     red: ['\x1B[31m', '\x1B[41m'],
     black: ['\x1B[30m', '\x1B[40m'],
     white: ['\x1b[37m', '\x1b[47m'],
-    green: ['\x1B[42m', '\x1B[42m'],
+    green: ['\x1B[32m', '\x1B[42m'],
     yellow: ['\x1B[33m', '\x1B[43m'],
     blue: ['\x1B[34m', '\x1B[44m'],
     magenta: ['\x1B[35m', '\x1B[45m'],
     cyan: ['\x1B[36m', '\x1B[46m']);
+
